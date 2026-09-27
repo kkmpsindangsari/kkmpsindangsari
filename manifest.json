@@ -1,6 +1,6 @@
 {
-  "name": "Koperasi SMS",
-  "short_name": "SMS",
+  "name": "KKMP Sindangsari",
+  "short_name": "KKMP",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

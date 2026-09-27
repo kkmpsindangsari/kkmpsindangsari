@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"/>
+  <title>Koperasi SMS</title>
+
+  <link rel="manifest" href="manifest.json"/>
+
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Koperasi SMS"/>
+  <link rel="apple-touch-icon" href="icon-192.png"/>
+
+  <meta name="theme-color" content="#ffffff"/>
+
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #ffffff; }
+    iframe { border: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+  </style>
+</head>
+<body>
+  <iframe
+    allow="camera; microphone; geolocation; fullscreen"
+    allowfullscreen="true"
+    src="https://script.google.com/macros/s/AKfycbwnDjYBCxOX_5rm7OS_BgrugmA20Q8ZsP7-dO31YZIR1TadKPfRAo8vXKGT6rCI9Oqa/exec">
+  </iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (err) {
+          console.log('SW registration failed:', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
